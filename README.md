@@ -1,3 +1,7 @@
-# luoling0112.github.io
+# Personal Homepage
 
-https://luoling0112.github.io/
+This is the personal homepage of Huan Chen.
+
+Visit: https://luoling0112.github.io
+
+Last updated: January 2025 - Updated to fix deployment issue

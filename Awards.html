@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Awards | Huan Chen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+<style>
+/* 整体时间轴容器 */
+.timeline {
+  position: relative;
+  margin: 32px 0 48px 0;
+  
+  /* ⭐ 统一管理变量 */
+  --timeline-padding: 70px;  /* 整体离左边的距离 */
+  --line-x: 12px;            /* 竖线中心的水平位置 */
+  
+  padding-left: var(--timeline-padding);
+}
+
+/* 竖线：中心在 --line-x 上 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--line-x);
+  width: 3px;
+  background: var(--theme);
+  
+  /* 用 transform 让这 3px 宽度以 center 对齐 left */
+  transform: translateX(-50%);
+}
+
+/* 每一条记录 */
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+/* 圆点：和竖线同一个 x，自动计算相对位置 */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  
+  /* ⭐ 核心修复：自动计算相对 .timeline-item 的位置 */
+  left: calc(var(--line-x) - var(--timeline-padding));
+  top: 0.95em;              /* 垂直位置：大致对齐年份那一行 */
+  transform: translate(-50%, -50%);
+  
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--theme);
+  z-index: 2;
+}
+
+.timeline-year {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 3px;
+}
+
+.timeline-title {
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+  margin-top: 3px;
+}
+
+/* 夜间模式适配 */
+.dark-mode .timeline::before {
+  background: var(--theme);
+}
+
+.dark-mode .timeline-item::before {
+  background: var(--bg);
+}
+
+.dark-mode .timeline-title { 
+  color: #fff; 
+}
+
+.dark-mode .timeline-desc { 
+  color: #bbb; 
+}
+
+/* 手机端：自动适配，只需改变量即可 */
+@media (max-width: 768px) {
+  .timeline {
+    --timeline-padding: 55px;
+    --line-x: 20px;
+  }
+}
+</style>
+
+</head>
+
+
+<body>
+
+<!-- ===== Navigation Bar ===== -->
+<div class="navbar">
+  <div class="inner">
+    <div class="right">
+      <a href="index.html">Home</a>
+      <a href="pub.html">Publications</a>
+      <a href="Awards.html" class="active">Awards</a>
+      <a href="partner.html">Partners</a>
+      <a href="CV.html">CV</a>
+      <span class="toggle-dark" onclick="toggleDark()">🌙</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== Page Content ===== -->
+<div class="container">
+  <h1>Awards</h1>
+
+
+  <!-- ======================= -->
+  <!--      HONORS (竞赛类)    -->
+  <!-- ======================= -->
+  <h2>Honors</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title">Grand Prize — 9th National LiDAR Conference Point Cloud Intelligent Analysis Competition</div>
+      <div class="timeline-desc">Top-tier national challenge in point cloud intelligence.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2024</div>
+      <div class="timeline-title">Grand Prize — 8th “HuaCe Cup” 3D Digital Base Data Processing Competition</div>
+      <div class="timeline-desc">Recognized for excellence in 3D base data processing.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2024</div>
+      <div class="timeline-title">First Prize — 22nd SuperMap Cup National College GIS Competition (Cartography Group)</div>
+      <div class="timeline-desc">Awarded for outstanding cartography and GIS mapping performance.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2024</div>
+      <div class="timeline-title">First Prize — Guangdong Provincial Mathematical Contest in Modeling (MCM)</div>
+      <div class="timeline-desc">Provincial-level recognition for excellence in mathematical modeling.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2024</div>
+      <div class="timeline-title">Second Prize — National Mathematical Contest for College Students (Non-Math Category A)</div>
+      <div class="timeline-desc">Award for high performance in national mathematics challenge.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2024</div>
+      <div class="timeline-title">Excellence Award — 11th “Sharing Cup” Innovation Competition on Sci-Tech Resource Sharing</div>
+      <div class="timeline-desc">Recognizing innovative solutions for resource sharing services.</div>
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================= -->
+  <!--     SCHOLARSHIPS        -->
+  <!-- ======================= -->
+  <h2>Scholarships</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title">China National Scholarship</div>
+      <div class="timeline-desc">Highest national-level award for top academic performance.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title">First Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
+      <div class="timeline-desc">Awarded for academic excellence within the university.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2024</div>
+      <div class="timeline-title">Second Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
+      <div class="timeline-desc">Recognition of strong academic and research performance.</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>© 2025 Huan Chen</footer>
+</body>
+</html>
