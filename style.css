@@ -339,3 +339,14 @@ ul.list-tight li { margin: 8px 0; }
     --line-x: 20px;
   }
 }
+.arxiv-icon {
+  width: 50px;        /* 图标缩小到最协调尺寸 */
+  height: 25px;
+  margin-left: 6px;   /* 和标题保持适度间距 */
+  vertical-align: middle;  /* 保证不顶上也不下沉 */
+}
+
+.arxiv-link {
+  display: inline-block;
+  line-height: 1;     /* 避免撑大标题行高 */
+}
