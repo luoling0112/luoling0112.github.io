@@ -11,3 +11,15 @@ window.addEventListener("DOMContentLoaded", () => {
     if (a.getAttribute("href") === path) a.classList.add("active");
   });
 });
+
+function toggleAbstract(btn) {
+  const abs = btn.nextElementSibling; // 下一个 div.abstract
+  if (abs.style.display === "none") {
+    abs.style.display = "block";
+    btn.textContent = "Hide Abstract";
+  } else {
+    abs.style.display = "none";
+    btn.textContent = "Abstract";
+  }
+}
+

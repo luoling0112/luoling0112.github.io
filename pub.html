@@ -46,6 +46,21 @@
         Yiping Chen<sup>*</sup>
       </p>
       <p><em>Urban Informatics, 2025</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Quantifying the heat island effect by integrating high-temperature hazards with urban land use, morphology, and environmental components is critical to understanding the comprehensive impacts of urban thermal environments. 
+        <b>This study proposes an interpretable and scalable framework to examine the diurnal variation of land surface temperature (LST) in response to multi-dimensional urban morphological features. </b>
+        Using Travis, Texas, as a representative case, we compile a comprehen-sive framework combining building patterns, land cover classifications, and environmental indicators. 
+        A total of 12 morphological metrics across six thematic dimensions are extracted at the urban block scale. 
+        We employ spatial statistical techniques, such as the Geographical Detector and Geographically Weighted Regression (GWR), to identify key drivers, nonlinear interactions, and spatial heterogeneity of LST across day and night periods. 
+        The results reveal strong spatial variability and diurnal asymmetry in thermal responses. 
+        Hard infrastructure factors such as impervious surface percentage and road density are positively associated with LST, while vegetation indices and landscape complexity exhibit significant cooling effects, particu-larly at night. 
+        Interactive effects among indicators display complex synergistic and threshold behaviors, indicating that com-bined urban features may amplify or offset thermal risks depending on spatial context. 
+        GWR further confirms localized variations in effect magnitude and direction, reinforcing the need for site-specific mitigation strategies. 
+        This study highlights the importance of integrating interpretable spatial statistical analysis with geospatial diagnostics to disentangle the multifactorial mechanisms underlying urban heat exposure. 
+        The proposed methodology provides both scientific insights and actionable guidance for data-informed, climate-resilient urban planning.
+      </div>
     </div>
   </div>
 
@@ -57,7 +72,13 @@
       <img src="./publication/GeoAI25.png" alt="">
     </div>
     <div class="text">
-      <h3>Semantic4Safety: Causal Insights from Zero-shot Street View Imagery Segmentation for Urban Road Safety</h3>
+      <h3>
+        Semantic4Safety: Causal Insights from Zero-shot Street View Imagery Segmentation for Urban Road Safety
+        <a href="https://www.arxiv.org/abs/2510.15434" target="_blank" class="arxiv-link">
+          <img src="./pic/arxiv-logo.png" alt="arXiv" class="arxiv-icon">
+        </a>
+      </h3>
+
       <p class="authors">
         <b>Huan Chen</b><sup>†</sup>,
         Ting Han<sup>†</sup>,
@@ -67,6 +88,15 @@
         Meiliu Wu<sup>*</sup>
       </p>
       <p><em>GeoAI25, ACM SIGSPATIAL Workshop</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Street-view imagery (SVI) offers a fine-grained lens on traffic risk, yet two fundamental challenges persist: (1) how to construct street-level indicators that capture accident-related features, and (2) how to quantify their causal impacts across different accident types. 
+        To address these challenges, we propose <b>Semantic4Safety</b>, a framework that applies zero-shot semantic segmentation to SVIs to derive 11 interpretable streetscape indicators, and integrates road type as contextual information to analyze approximately 30,000 accident records in Austin. 
+        Specifically, we train an eXtreme Gradient Boosting (XGBoost) multi-class classifier and use Shapley Additive Explanations (SHAP) to interpret both global and local feature contributions, and then apply Generalized Propensity Score (GPS) weighting and Average Treatment Effect (ATE) estimation to control confounding and quantify causal effects. 
+        Results uncover heterogeneous, accident-type-specific causal patterns: features capturing scene complexity, exposure, and roadway geometry dominate predictive power; larger drivable area and emergency space reduce risk, whereas excessive visual openness can increase it. 
+        By bridging predictive modeling with causal inference, Semantic4Safety supports targeted interventions and high-risk corridor diagnosis, offering a scalable, data-informed tool for urban road safety planning.
+      </div>
     </div>
   </div>
 
@@ -75,7 +105,13 @@
       <img src="./publication/GeoIndustry2025.png" alt="">
     </div>
     <div class="text">
-      <h3>GBA-UBF: A Large-Scale and Fine-Grained Building Function Classification Dataset in the Greater Bay Area</h3>
+      <h3>
+        GBA-UBF: A Large-Scale and Fine-Grained Building Function Classification Dataset in the Greater Bay Area
+        <a href="https://arxiv.org/abs/2510.08921" target="_blank" class="arxiv-link">
+          <img src="./pic/arxiv-logo.png" alt="arXiv" class="arxiv-icon">
+        </a>
+      </h3>
+
       <p class="authors">
         Chunsong Chen<sup>†</sup>,
         Yichen Hou<sup>†</sup>,
@@ -87,6 +123,20 @@
         Ting Han<sup>*</sup>
       </p>
       <p><em>GeoIndustry25, ACM SIGSPATIAL Workshop</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Rapid urbanization in the Guangdong–Hong Kong–Macao Greater Bay Area (GBA) has created urgent demand for high-resolution, building-level functional data to support sustainable spatial planning. 
+        Existing land use datasets suffer from coarse granularity and difficulty in capturing intra-block heterogeneity. 
+        To this end, we present the <b>Greater Bay Area Urban Building Function Dataset (GBA-UBF)</b>, a large-scale, fine-grained dataset that assigns one of five functional categories to nearly four million buildings across six core GBA cities. 
+        We proposed a Multi-level Building Function Optimization (ML-BFO) method by integrating POI records and building footprints through a three-stage pipeline: (1) candidate label generation using spatial overlay with proximity weighting, (2) iterative refinement based on neighborhood label autocorrelation, and (3) function-related correction informed by advanced POI buffers. 
+        To quantitatively validate results, we design the Building Function Matching Index (BFMI), which jointly measures categorical consistency and distributional similarity against POI-derived probability heatmaps. 
+        Comparative experiments demonstrate that GBA-UBF achieves significantly higher accuracy, with a BMFI of 0.58. 
+        This value markedly exceeds that of the baseline dataset and exhibits superior alignment with urban activity patterns. 
+        Field validation further confirms the dataset's semantic reliability and practical interpretability. 
+        The GBA-UBF dataset establishes a reproducible framework for building-level functional classification, bridging the gap between coarse land use maps and fine-grained urban analytics. 
+        The dataset is accessible at <b><a href="https://github.com/chenchs0629/GBA-UBF">https://github.com/chenchs0629/GBA-UBF</a></b>, and the data will undergo continuous improvement and updates based on feedback from the community.
+      </div>
     </div>
   </div>
 
@@ -96,6 +146,7 @@
     </div>
     <div class="text">
       <h3>Towards A New Era of Geo-Foundation Models: Expert-Guided Multimodal Alignment and Geospatial Context Awareness</h3>
+
       <p class="authors">
         Ting Han,
         <b>Huan Chen</b>,
@@ -104,6 +155,19 @@
         Meiliu Wu<sup>*</sup>
       </p>
       <p><em>ACM SIGSPATIAL 2025</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Foundation Models (FMs) have demonstrated significant potential for geospatial analysis. 
+        As geospatial big data (e.g., geo-tagged text and images) continues to grow, FMs have evolved into geospatial foundation models (GeoFMs), the FMs with the capability of geospatial reasoning. 
+        However, two critical tasks remain challenging: (1) how to align various geospatial modalities for model training, and (2) how to enhance FMs' geospatial context awareness. 
+        To fill these gaps, this work develops <b>CLIP4Geo</b>, a unified GeoFM that integrates satellite imagery, LiDAR point clouds, geo-tagged points of interest (POIs), and textual descriptions into a shared representation space. 
+        Specifically, to empower the model with geospatial intelligence, we design a Geospatial Expert Knowledge System, which tailors both textual and visual information and encodes them into shared geospatial embeddings. 
+        Furthermore, we propose a novel Geospatial Context Awareness Transformer to guide the cross-attention mechanism, which leverages geospatial context position embedding to effectively capture spatial dependencies across modalities. 
+        We also introduce CityVerse, a large-scale, spatially aligned, and multimodal benchmark dataset covering diverse urban regions in the U.S. and China, supporting a range of geospatial downstream tasks (e.g., zero-shot classification, semantic segmentation / localization, and cross-modality retrieval and generation). 
+        Extensive experiments demonstrate that CLIP4Geo consistently outperforms state-of-the-art FM baselines, highlighting the importance of expert-guided multimodal alignment and geospatial context embeddings. 
+        Our work provides a scalable framework and comprehensive benchmark to facilitate the future development of GeoFMs for various geospatial applications.
+      </div>
     </div>
   </div>
 
@@ -113,6 +177,7 @@
     </div>
     <div class="text">
       <h3>VoxelFlow: 2D Semantic Mask-Guided Voxel Flow for Open-Vocabulary 3D Instance Segmentation</h3>
+
       <p class="authors">
         Chaolei Wang,
         <b>Huan Chen</b>,
@@ -122,6 +187,19 @@
       </p>
       <p><em>International Conference on Cyberworlds 2025 (CW 2025)</em></p>
       <p class="award">🏆 Best Paper Honorable Mention</p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Open-vocabulary 3D instance segmentation (OV3IS) has emerged as a promising field, successfully bridging point cloud data and text descriptions via intermediate image modalities. 
+        However, existing approaches often rely on strong 3D clustering priors or a single, isolated 2D mask branch, which typically leads to insufficient and inefficient feature interaction between the point cloud and image domains.
+        To address these limitations, we propose <b>VoxelFlow</b>, a novel framework that effectively combines 2D mask semantics with 3D geometric features. 
+        Our core insight is to leverage the implicit semantic and spatial information embedded in 2D masks, using them to replace rigid 3D priors. 
+        Specifically, voxel masks, initially derived from 2D projections, are meticulously refined through a unique two-stage process: growth and cross-frame merging, ensuring precise alignment with true instance masks under both semantic and geometric constraints.
+        The methodology unfolds in three key steps. Firstly, we project 2D masks onto a voxelized 3D scene to establish initial seed 3D voxel masks. 
+        Secondly, these voxel masks are grown based on local 3D geometric features and progressively merged across different frames using a dynamic threshold, yielding robust super voxel masks. 
+        Finally, these semantically consistent and geometrically aligned super voxel masks are integrated with a visual language model and text embeddings to achieve comprehensive open-vocabulary instance segmentation.
+        Extensive experiments on ScanNet200 and ScanNet++ demonstrate that VoxelFlow not only significantly outperforms robust 3D prior baselines but also achieves superior performance in both class-agnostic and open-vocabulary 3D instance segmentation.
+      </div>
     </div>
   </div>
 
@@ -131,6 +209,7 @@
     </div>
     <div class="text">
       <h3>LiDAR-DHMT: LiDAR-Adaptive Dual Hierarchical Mask Transformer for Robust Freespace Detection and Semantic Segmentation</h3>
+
       <p class="authors">
         Siyu Chen,
         Ting Han<sup>*</sup>,
@@ -142,11 +221,23 @@
         Jinhe Su<sup>*</sup>
       </p>
       <p><em>Winter Conference on Applications of Computer Vision 2026 (WACV 2026)</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Inaccurate freespace detection remains a significant challenge to the safety of autonomous driving. 
+        However, we observe that current multisource fusion approaches rely on converting LiDAR point clouds into depth maps, often lose crucial 3D geometric cues. 
+        This compromises the spatial consistency of predictions, especially in complex urban scenes. 
+        To address this limitation, we propose <b>LiDAR-DHMT (LiDAR-Adaptive Dual-branch Hierarchical Mask Transformer)</b>, a novel framework designed for spatial-consistent freespace detection and semantic segmentation. 
+        ur key innovation lies in the introduction of a 3D Relative Position Bias module, which effectively captures LiDAR's inherent spatial priors. 
+        This is coupled with a Dynamic Bias Attention mechanism that adaptively incorporates the 3D positional cues into the Transformer's attention computation, enhancing spatial coherence. 
+        Additionally, we employ a Mask Interaction module and a global-local fusion strategy to jointly model contextual semantics and fine-grained structural details. 
+        Extensive experiments conducted on the KITTI Road, KITTI-360, Cityscapes datasets demonstrate that LiDAR-DHMT consistently outperforms existing state-of-the-art methods, achieving a competitive 97.59% F1 score in freespace detection and 69.45% and 84.4% mIoU in semantic segmentation. 
+        Our findings suggest that LiDAR-DHMT offers a practical solution for deploying robust freespace perception in complex urban driving environments.
+      </div>
     </div>
   </div>
 
-
-
+  <!-- ================= arXiv ================= -->
   <h2>arXiv Preprints</h2>
 
   <div class="pub-card">
@@ -154,7 +245,8 @@
       <img src="./publication/SatSAM2.png" alt="">
     </div>
     <div class="text">
-      <h3>SatSAM2: Motion-Constrained Video Object Tracking in Satellite Imagery using Promptable SAM2 and Kalman Priors
+      <h3>
+        SatSAM2: Motion-Constrained Video Object Tracking in Satellite Imagery using Promptable SAM2 and Kalman Priors
         <a href="https://arxiv.org/abs/2511.18264" target="_blank" class="arxiv-link">
           <img src="./pic/arxiv-logo.png" alt="arXiv" class="arxiv-icon">
         </a>
@@ -170,9 +262,22 @@
       </p>
 
       <p><em>arXiv:2511.18264, 2025</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" style="display:none;">
+        Existing satellite video tracking methods often struggle with generalization, requiring scenario-specific training to achieve satisfactory performance, and are prone to track loss in the presence of occlusion.
+        To address these challenges, we propose <b>SatSAM2</b>, a zero-shot satellite video tracker built on SAM2, designed to adapt foundation models to the remote sensing domain. 
+        SatSAM2 introduces two core modules: a Kalman Filter-based Constrained Motion Module (KFCMM) to exploit temporal motion cues and suppress drift, and a Motion-Constrained State Machine (MCSM) to regulate tracking states based on motion dynamics and reliability. 
+        To support large-scale evaluation, we propose MatrixCity Video Object Tracking (MVOT), a synthetic benchmark containing 1,500+ sequences and 157K annotated frames with diverse viewpoints, illumination, and occlusion conditions. 
+        Extensive experiments on two satellite tracking benchmarks and MVOT show that SatSAM2 outperforms both traditional and foundation model-based trackers, including SAM2 and its variants. 
+        Notably, on the OOTB dataset, SatSAM2 achieves a 5.84% AUC improvement over state-of-the-art methods. 
+        Our code and dataset will be publicly released to encourage further research.
+      </div>
     </div>
   </div>
+
 </div>
+
 
 <footer>© 2025 Huan Chen</footer>
 </body>
