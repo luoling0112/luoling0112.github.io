@@ -370,3 +370,20 @@ ul.list-tight li { margin: 8px 0; }
   font-size: 0.95rem;
   line-height: 1.45;
 }
+
+/* ===== 谷歌学术图标 ===== */
+.scholar-link-inline {
+  display: inline-block;
+  line-height: 0;
+}
+
+.scholar-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: opacity 0.3s;
+}
+
+.scholar-link-inline:hover .scholar-icon {
+  opacity: 0.7;
+}
