@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Activities | Huan Chen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<style>
+.activity-card {
+  margin: 24px 0;
+  padding: 18px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--bg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.activity-cover {
+  width: 100%;
+  max-width: 760px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.16);
+  display: block;
+  margin: 0 auto 14px auto;
+}
+
+.activity-title {
+  margin: 0 0 8px 0;
+}
+
+.activity-meta {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+.activity-list {
+  margin-top: 10px;
+}
+
+.activity-list li {
+  margin-bottom: 8px;
+}
+
+.dark-mode .activity-card {
+  box-shadow: 0 2px 10px rgba(255,255,255,0.06);
+}
+</style>
+</head>
+
+<body>
+<div class="navbar">
+  <div class="inner">
+    <div class="right">
+      <a href="index.html">Home</a>
+      <a href="pub.html">Publications</a>
+      <a href="Awards.html">Awards</a>
+      <a href="activities.html" class="active">Activities</a>
+      <a href="partner.html">Partners</a>
+      <a href="CV.html">CV</a>
+      <span class="toggle-dark" onclick="toggleDark()">🌙</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Activities</h1>
+
+  <div class="activity-card">
+    <img src="./activity/20th-GIS.jpg" alt="The 20th Annual Conference on Theories and Methods of Geographical Information Science" class="activity-cover">
+    <h2 class="activity-title">The 20th Annual Conference on Theories and Methods of Geographical Information Science</h2>
+    <p class="activity-meta">Nov. 21-24, 2025 | Xiamen, China · Jimei University</p>
+
+    <ul class="activity-list">
+      <li>Youth Scholar (Student) Paper Competition: GBA-UBF: A large-scale and fine-grained building function classification dataset in the Greater Bay Area.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>© 2026 Huan Chen</footer>
+</body>
+</html>
