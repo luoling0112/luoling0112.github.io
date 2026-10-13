@@ -2,98 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Publications | Huan Chen</title>
+<title data-zh="学术论文 | 陈桓">Publications | Huan Chen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-<style>
-/* 年份分界线样式 */
-.year-divider {
-  font-size: 1.5em;
-  font-weight: 600;
-  color: #2c3e50;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 0.5em;
-  margin: 2.5em 0 1.5em 0;
-}
-
-body.dark-mode .year-divider {
-  color: #ecf0f1;
-  border-bottom-color: #444;
-}
-
-/* 论文类型标题样式 */
-.section-header {
-  position: relative;
-  padding: 1em 1.5em;
-  margin: 2.5em 0 1.5em 0;
-  border-radius: 8px;
-  font-size: 1.6em;
-  font-weight: 600;
-  border-left: 4px solid;
-}
-
-.section-header.journal {
-  background: linear-gradient(to right, rgba(255, 182, 193, 0.15), rgba(255, 255, 255, 0));
-  border-left-color: #ffb6c1;
-  color: #d63384;
-}
-
-.section-header.conference {
-  background: linear-gradient(to right, rgba(135, 206, 250, 0.15), rgba(255, 255, 255, 0));
-  border-left-color: #87ceeb;
-  color: #0d6efd;
-}
-
-.section-header.arxiv {
-  background: linear-gradient(to right, rgba(144, 238, 144, 0.15), rgba(255, 255, 255, 0));
-  border-left-color: #90ee90;
-  color: #198754;
-}
-
-body.dark-mode .section-header.journal {
-  background: linear-gradient(to right, rgba(255, 182, 193, 0.1), rgba(0, 0, 0, 0));
-  color: #ff9ab5;
-}
-
-body.dark-mode .section-header.conference {
-  background: linear-gradient(to right, rgba(135, 206, 250, 0.1), rgba(0, 0, 0, 0));
-  color: #6db3f2;
-}
-
-body.dark-mode .section-header.arxiv {
-  background: linear-gradient(to right, rgba(144, 238, 144, 0.1), rgba(0, 0, 0, 0));
-  color: #75d975;
-}
-
-/* 移除原有的 h2 样式影响 */
-.container > h2 {
-  display: none;
-}
-</style>
 </head>
 
 <body>
 
-<div class="navbar">
+<nav class="navbar" aria-label="Main navigation" data-zh="主导航" data-translate-attribute="aria-label">
   <div class="inner">
+    <a href="index.html" class="brand" data-zh="陈桓">Huan Chen</a>
     <div class="right">
-      <a href="index.html">Home</a>
-      <a href="pub.html" class="active">Publications</a>
-      <a href="Awards.html">Awards</a>
-      <a href="activities.html">Activities</a>
-      <a href="partner.html">Partners</a>
-      <a href="CV.html">CV</a>
-      <span class="toggle-dark" onclick="toggleDark()">🌙</span>
+      <a href="index.html" data-zh="首页">Home</a>
+      <a href="pub.html" class="active" data-zh="学术论文">Publications</a>
+      <a href="Awards.html" data-zh="荣誉奖励">Awards</a>
+      <a href="activities.html" data-zh="学术活动">Activities</a>
+      <a href="partner.html" data-zh="合作伙伴">Partners</a>
+      <a href="CV.html" data-zh="个人简历">CV</a>
+      <div class="nav-controls">
+        <button class="toggle-dark" type="button" onclick="toggleDark()" aria-label="Toggle color theme">Dark</button>
+        <button class="toggle-language" type="button" onclick="toggleLanguage()" aria-label="Switch to Chinese">中文</button>
+      </div>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="container">
-  <h1>Publications</h1>
+<main class="container">
+  <h1 class="page-title" data-zh="学术论文">Publications</h1>
 
   <!-- ================= Journal ================= -->
-  <div class="section-header journal">Journal Papers</div>
+  <div class="section-header journal" data-zh="期刊论文">Journal Papers</div>
 
   <h3 class="year-divider">2026</h3>
 
@@ -102,8 +41,8 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/UI.png" alt="">
     </div>
     <div class="text">
-      <h3>Exploring the influence of urban land use and morphology on diurnal heat variation: Insights from Travis, Texas</h3>
-      <p class="authors">
+      <h3 lang="en">Exploring the influence of urban land use and morphology on diurnal heat variation: Insights from Travis, Texas</h3>
+      <p class="authors" lang="en">
         <b>Huan Chen</b><sup>†</sup>,
         Chenxi Du<sup>†</sup>,
         Ting Han<sup>†</sup>,
@@ -113,10 +52,10 @@ body.dark-mode .section-header.arxiv {
         Xinchang Zhang,
         Yiping Chen<sup>*</sup>
       </p>
-      <p><em>Urban Informatics, 2026</em></p>
+      <p><em lang="en">Urban Informatics, 2026</em></p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Quantifying the heat island effect by integrating high-temperature hazards with urban land use, morphology, and environmental components is critical to understanding the comprehensive impacts of urban thermal environments. 
         <b>This study proposes an interpretable and scalable framework to examine the diurnal variation of land surface temperature (LST) in response to multi-dimensional urban morphological features. </b>
         Using Travis, Texas, as a representative case, we compile a comprehen-sive framework combining building patterns, land cover classifications, and environmental indicators. 
@@ -132,8 +71,44 @@ body.dark-mode .section-header.arxiv {
     </div>
   </div>
 
+   <div class="pub-card">
+    <div class="thumb">
+      <img src="./publication/scientific.png" alt="">
+    </div>
+    <div class="text">
+      <h3 lang="en">Scale-associated differences in building-oriented land subsidence susceptibility under a nested spatial design using SBAS-InSAR and interpretable machine learning</h3>
+      <p class="authors" lang="en">
+        Yifei Jiang,
+        Neng Wang,
+        Guiwen Liu,
+        Xun Deng,
+        Ting Han,
+        Binfeng Bian,
+        <b>Huan Chen</b>,
+        Jie Liu
+      </p>
+      <p><em lang="en">Scientific Reports, 2026</em></p>
+
+      <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
+      <div class="Abstract" lang="en" style="display:none;">
+        The exponential growth of urban development has brought about several environmental problems, land subsidence being one of them. Land subsidence within building-containing urban areas is an important concern 
+        for urban safety management. Nevertheless, the nonlinear associations between multiple impact factors and 
+        building-oriented land subsidence susceptibility (BOLSS) across different spatial scales, together with the corresponding planning and monitoring implications, remain insufficiently understood. In this study, the small 
+        baseline subset interferometric synthetic aperture radar (SBAS-InSAR) technique, a random forest (RF) model, 
+        and geographic information system (GIS) tools were used to map the susceptibility of building-containing 
+        spatial units to land subsidence, hereafter referred to as BOLSS. SHapley Additive exPlanations (SHAP), partial dependence plots, and variable interaction plots were then used to analyze the associations of 15 selected 
+        impact factors with BOLSS at the built-up area (BUA) and southwest-BUA scales in Chongqing. The findings 
+        show that the factors associated with BOLSS differ between the BUA and southwest-BUA scales. Specifically, 
+        built-environment factors make the largest contributions at the BUA scale, whereas natural-environment factors 
+        and changes in built-environment conditions make larger contributions at the southwest-BUA scale. In addition, most factors show nonlinear relationships with BOLSS, with scale-dependent differences. This BOLSS 
+        mapping provides a preliminary visualization tool for identifying building-containing areas with relatively high 
+        subsidence susceptibility. The scale-dependent analysis offers useful information for prioritizing urban monitoring and planning measures.
+      </div>
+    </div>
+  </div>
+
   <!-- ================= Conferences ================= -->
-  <div class="section-header conference">Conference Papers</div>
+  <div class="section-header conference" data-zh="会议论文">Conference Papers</div>
 
 
   <h3 class="year-divider">2025</h3>
@@ -143,7 +118,7 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/GeoAI25.png" alt="">
     </div>
     <div class="text">
-      <h3>
+      <h3 lang="en">
         Semantic4Safety: Causal Insights from Zero-shot Street View Imagery Segmentation for Urban Road Safety
       </h3>
 
@@ -153,7 +128,7 @@ body.dark-mode .section-header.arxiv {
         </a>
       </p>
 
-      <p class="authors">
+      <p class="authors" lang="en">
         <b>Huan Chen</b><sup>†</sup>,
         Ting Han<sup>†</sup>,
         Siyu Chen,
@@ -161,10 +136,10 @@ body.dark-mode .section-header.arxiv {
         Yiping Chen<sup>*</sup>,
         Meiliu Wu<sup>*</sup>
       </p>
-      <p><em>GeoAI25, ACM SIGSPATIAL Workshop</em></p>
+      <p><em lang="en">GeoAI25, ACM SIGSPATIAL Workshop</em></p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Street-view imagery (SVI) offers a fine-grained lens on traffic risk, yet two fundamental challenges persist: (1) how to construct street-level indicators that capture accident-related features, and (2) how to quantify their causal impacts across different accident types. 
         To address these challenges, we propose <b>Semantic4Safety</b>, a framework that applies zero-shot semantic segmentation to SVIs to derive 11 interpretable streetscape indicators, and integrates road type as contextual information to analyze approximately 30,000 accident records in Austin. 
         Specifically, we train an eXtreme Gradient Boosting (XGBoost) multi-class classifier and use Shapley Additive Explanations (SHAP) to interpret both global and local feature contributions, and then apply Generalized Propensity Score (GPS) weighting and Average Treatment Effect (ATE) estimation to control confounding and quantify causal effects. 
@@ -179,7 +154,7 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/GeoIndustry2025.png" alt="">
     </div>
     <div class="text">
-      <h3>
+      <h3 lang="en">
         GBA-UBF: A Large-Scale and Fine-Grained Building Function Classification Dataset in the Greater Bay Area
       </h3>
 
@@ -189,7 +164,7 @@ body.dark-mode .section-header.arxiv {
         </a>
       </p>
 
-      <p class="authors">
+      <p class="authors" lang="en">
         Chunsong Chen<sup>†</sup>,
         Yichen Hou<sup>†</sup>,
         <b>Huan Chen</b><sup>†</sup>,
@@ -199,10 +174,10 @@ body.dark-mode .section-header.arxiv {
         Yiping Chen<sup>*</sup>,
         Ting Han<sup>*</sup>
       </p>
-      <p><em>GeoIndustry25, ACM SIGSPATIAL Workshop</em></p>
+      <p><em lang="en">GeoIndustry25, ACM SIGSPATIAL Workshop</em></p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Rapid urbanization in the Guangdong–Hong Kong–Macao Greater Bay Area (GBA) has created urgent demand for high-resolution, building-level functional data to support sustainable spatial planning. 
         Existing land use datasets suffer from coarse granularity and difficulty in capturing intra-block heterogeneity. 
         To this end, we present the <b>Greater Bay Area Urban Building Function Dataset (GBA-UBF)</b>, a large-scale, fine-grained dataset that assigns one of five functional categories to nearly four million buildings across six core GBA cities. 
@@ -222,19 +197,19 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/sigspatial2025.png" alt="">
     </div>
     <div class="text">
-      <h3>Towards A New Era of Geo-Foundation Models: Expert-Guided Multimodal Alignment and Geospatial Context Awareness</h3>
+      <h3 lang="en">Towards A New Era of Geo-Foundation Models: Expert-Guided Multimodal Alignment and Geospatial Context Awareness</h3>
 
-      <p class="authors">
+      <p class="authors" lang="en">
         Ting Han,
         <b>Huan Chen</b>,
         Chaolei Wang,
         Yilan Ren,
         Meiliu Wu<sup>*</sup>
       </p>
-      <p><em>ACM SIGSPATIAL 2025</em></p>
+      <p><em lang="en">ACM SIGSPATIAL 2025</em></p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Foundation Models (FMs) have demonstrated significant potential for geospatial analysis. 
         As geospatial big data (e.g., geo-tagged text and images) continues to grow, FMs have evolved into geospatial foundation models (GeoFMs), the FMs with the capability of geospatial reasoning. 
         However, two critical tasks remain challenging: (1) how to align various geospatial modalities for model training, and (2) how to enhance FMs' geospatial context awareness. 
@@ -253,20 +228,20 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/cw2025.png" alt="">
     </div>
     <div class="text">
-      <h3>VoxelFlow: 2D Semantic Mask-Guided Voxel Flow for Open-Vocabulary 3D Instance Segmentation</h3>
+      <h3 lang="en">VoxelFlow: 2D Semantic Mask-Guided Voxel Flow for Open-Vocabulary 3D Instance Segmentation</h3>
 
-      <p class="authors">
+      <p class="authors" lang="en">
         Chaolei Wang,
         <b>Huan Chen</b>,
         Jin Ma,
         Ting Han,
         Yiping Chen<sup>*</sup>
       </p>
-      <p><em>International Conference on Cyberworlds 2025 (CW 2025)</em></p>
-      <p class="award">🏆 Best Paper Honorable Mention</p>
+      <p><em lang="en">International Conference on Cyberworlds 2025 (CW 2025)</em></p>
+      <p class="award" data-zh="🏆 最佳论文荣誉提名">🏆 Best Paper Honorable Mention</p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Open-vocabulary 3D instance segmentation (OV3IS) has emerged as a promising field, successfully bridging point cloud data and text descriptions via intermediate image modalities. 
         However, existing approaches often rely on strong 3D clustering priors or a single, isolated 2D mask branch, which typically leads to insufficient and inefficient feature interaction between the point cloud and image domains.
         To address these limitations, we propose <b>VoxelFlow</b>, a novel framework that effectively combines 2D mask semantics with 3D geometric features. 
@@ -285,9 +260,9 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/WACV.png" alt="">
     </div>
     <div class="text">
-      <h3>LiDAR-DHMT: LiDAR-Adaptive Dual Hierarchical Mask Transformer for Robust Freespace Detection and Semantic Segmentation</h3>
+      <h3 lang="en">LiDAR-DHMT: LiDAR-Adaptive Dual Hierarchical Mask Transformer for Robust Freespace Detection and Semantic Segmentation</h3>
 
-      <p class="authors">
+      <p class="authors" lang="en">
         Siyu Chen,
         Ting Han<sup>*</sup>,
         Changshe Zhang,
@@ -297,10 +272,10 @@ body.dark-mode .section-header.arxiv {
         Guorong Cai,
         Jinhe Su<sup>*</sup>
       </p>
-      <p><em>Winter Conference on Applications of Computer Vision 2026 (WACV 2026)</em></p>
+      <p><em lang="en">Winter Conference on Applications of Computer Vision 2026 (WACV 2026)</em></p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Inaccurate freespace detection remains a significant challenge to the safety of autonomous driving. 
         However, we observe that current multisource fusion approaches rely on converting LiDAR point clouds into depth maps, often lose crucial 3D geometric cues. 
         This compromises the spatial consistency of predictions, especially in complex urban scenes. 
@@ -315,7 +290,7 @@ body.dark-mode .section-header.arxiv {
   </div>
 
   <!-- ================= arXiv ================= -->
-  <div class="section-header arxiv">arXiv Preprints</div>
+  <div class="section-header arxiv" data-zh="arXiv 预印本">arXiv Preprints</div>
 
   <h3 class="year-divider">2025</h3>
 
@@ -324,7 +299,7 @@ body.dark-mode .section-header.arxiv {
       <img src="./publication/SatSAM2.png" alt="">
     </div>
     <div class="text">
-      <h3>
+      <h3 lang="en">
         SatSAM2: Motion-Constrained Video Object Tracking in Satellite Imagery using Promptable SAM2 and Kalman Priors
       </h3>
 
@@ -334,7 +309,7 @@ body.dark-mode .section-header.arxiv {
         </a>
       </p>
 
-      <p class="authors">
+      <p class="authors" lang="en">
         Ruijie Fan,
         Junyan Ye,
         <b>Huan Chen</b>,
@@ -343,10 +318,10 @@ body.dark-mode .section-header.arxiv {
         Weijia Li<sup>*</sup>
       </p>
 
-      <p><em>arXiv:2511.18264, 2025</em></p>
+      <p><em lang="en">arXiv:2511.18264, 2025</em></p>
 
       <button class="abs-btn" onclick="toggleAbstract(this)">Abstract</button>
-      <div class="Abstract" style="display:none;">
+      <div class="Abstract" lang="en" style="display:none;">
         Existing satellite video tracking methods often struggle with generalization, requiring scenario-specific training to achieve satisfactory performance, and are prone to track loss in the presence of occlusion.
         To address these challenges, we propose <b>SatSAM2</b>, a zero-shot satellite video tracker built on SAM2, designed to adapt foundation models to the remote sensing domain. 
         SatSAM2 introduces two core modules: a Kalman Filter-based Constrained Motion Module (KFCMM) to exploit temporal motion cues and suppress drift, and a Motion-Constrained State Machine (MCSM) to regulate tracking states based on motion dynamics and reliability. 
@@ -358,9 +333,9 @@ body.dark-mode .section-header.arxiv {
     </div>
   </div>
 
-</div>
+</main>
 
 
-<footer>© 2026 Huan Chen</footer>
+<footer data-zh="© 2026 陈桓">© 2026 Huan Chen</footer>
 </body>
 </html>

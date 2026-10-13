@@ -2,106 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Awards | Huan Chen</title>
+<title data-zh="荣誉奖励 | 陈桓">Awards | Huan Chen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-
-<style>
-/* 整体时间轴容器 */
-.timeline {
-  position: relative;
-  margin: 32px 0 48px 0;
-  
-  /* ⭐ 统一管理变量 */
-  --timeline-padding: 70px;  /* 整体离左边的距离 */
-  --line-x: 12px;            /* 竖线中心的水平位置 */
-  
-  padding-left: var(--timeline-padding);
-}
-
-/* 竖线：中心在 --line-x 上 */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: var(--line-x);
-  width: 3px;
-  background: var(--theme);
-  
-  /* 用 transform 让这 3px 宽度以 center 对齐 left */
-  transform: translateX(-50%);
-}
-
-/* 每一条记录 */
-.timeline-item {
-  position: relative;
-  margin-bottom: 36px;
-}
-
-/* 圆点：和竖线同一个 x，自动计算相对位置 */
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  
-  /* ⭐ 核心修复：自动计算相对 .timeline-item 的位置 */
-  left: calc(var(--line-x) - var(--timeline-padding));
-  top: 0.95em;              /* 垂直位置：大致对齐年份那一行 */
-  transform: translate(-50%, -50%);
-  
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 3px solid var(--theme);
-  z-index: 2;
-}
-
-.timeline-year {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--fg);
-  margin-bottom: 3px;
-}
-
-.timeline-title {
-  font-size: 1.0rem;
-  font-weight: 600;
-  color: var(--fg);
-}
-
-.timeline-desc {
-  font-size: 0.9rem;
-  color: var(--fg-muted);
-  margin-top: 3px;
-}
-
-/* 夜间模式适配 */
-.dark-mode .timeline::before {
-  background: var(--theme);
-}
-
-.dark-mode .timeline-item::before {
-  background: var(--bg);
-}
-
-.dark-mode .timeline-title { 
-  color: #fff; 
-}
-
-.dark-mode .timeline-desc { 
-  color: #bbb; 
-}
-
-/* 手机端：自动适配，只需改变量即可 */
-@media (max-width: 768px) {
-  .timeline {
-    --timeline-padding: 55px;
-    --line-x: 20px;
-  }
-}
-</style>
 
 </head>
 
@@ -109,67 +13,71 @@
 <body>
 
 <!-- ===== Navigation Bar ===== -->
-<div class="navbar">
+<nav class="navbar" aria-label="Main navigation" data-zh="主导航" data-translate-attribute="aria-label">
   <div class="inner">
+    <a href="index.html" class="brand" data-zh="陈桓">Huan Chen</a>
     <div class="right">
-      <a href="index.html">Home</a>
-      <a href="pub.html">Publications</a>
-      <a href="Awards.html" class="active">Awards</a>
-      <a href="activities.html">Activities</a>
-      <a href="partner.html">Partners</a>
-      <a href="CV.html">CV</a>
-      <span class="toggle-dark" onclick="toggleDark()">🌙</span>
+      <a href="index.html" data-zh="首页">Home</a>
+      <a href="pub.html" data-zh="学术论文">Publications</a>
+      <a href="Awards.html" class="active" data-zh="荣誉奖励">Awards</a>
+      <a href="activities.html" data-zh="学术活动">Activities</a>
+      <a href="partner.html" data-zh="合作伙伴">Partners</a>
+      <a href="CV.html" data-zh="个人简历">CV</a>
+      <div class="nav-controls">
+        <button class="toggle-dark" type="button" onclick="toggleDark()" aria-label="Toggle color theme">Dark</button>
+        <button class="toggle-language" type="button" onclick="toggleLanguage()" aria-label="Switch to Chinese">中文</button>
+      </div>
     </div>
   </div>
-</div>
+</nav>
 
 
 <!-- ===== Page Content ===== -->
-<div class="container">
-  <h1>Awards</h1>
+<main class="container">
+  <h1 class="page-title" data-zh="荣誉奖励">Awards</h1>
 
 
   <!-- ======================= -->
   <!--      HONORS (竞赛类)    -->
   <!-- ======================= -->
-  <h2>Honors</h2>
+  <h2 data-zh="竞赛荣誉">Honors</h2>
 
   <div class="timeline">
 
     <div class="timeline-item">
       <div class="timeline-year">2025</div>
-      <div class="timeline-title">Grand Prize — 9th National LiDAR Conference Point Cloud Intelligent Analysis Competition</div>
-      <div class="timeline-desc">Top-tier national challenge in point cloud intelligence.</div>
+      <div class="timeline-title" data-zh="第九届全国激光雷达大会点云智能分析竞赛 · 特等奖">Grand Prize — 9th National LiDAR Conference Point Cloud Intelligent Analysis Competition</div>
+      <div class="timeline-desc" data-zh="全国性点云智能分析竞赛。">Top-tier national challenge in point cloud intelligence.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2024</div>
-      <div class="timeline-title">Grand Prize — 8th “HuaCe Cup” 3D Digital Base Data Processing Competition</div>
-      <div class="timeline-desc">Recognized for excellence in 3D base data processing.</div>
+      <div class="timeline-title" data-zh="第八届“华测杯”三维数字底座数据处理大赛 · 特等奖">Grand Prize — 8th “HuaCe Cup” 3D Digital Base Data Processing Competition</div>
+      <div class="timeline-desc" data-zh="三维数字底座数据处理方面的竞赛奖励。">Recognized for excellence in 3D base data processing.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2024</div>
-      <div class="timeline-title">First Prize — 22nd SuperMap Cup National College GIS Competition (Cartography Group)</div>
-      <div class="timeline-desc">Awarded for outstanding cartography and GIS mapping performance.</div>
+      <div class="timeline-title" data-zh="第二十二届“超图杯”全国高校 GIS 大赛（制图组）· 一等奖">First Prize — 22nd SuperMap Cup National College GIS Competition (Cartography Group)</div>
+      <div class="timeline-desc" data-zh="地理信息系统制图与地图表达方面的竞赛奖励。">Awarded for outstanding cartography and GIS mapping performance.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2024</div>
-      <div class="timeline-title">First Prize — Guangdong Provincial Mathematical Contest in Modeling (MCM)</div>
-      <div class="timeline-desc">Provincial-level recognition for excellence in mathematical modeling.</div>
+      <div class="timeline-title" data-zh="广东省大学生数学建模竞赛 · 一等奖">First Prize — Guangdong Provincial Mathematical Contest in Modeling (MCM)</div>
+      <div class="timeline-desc" data-zh="省级数学建模竞赛奖励。">Provincial-level recognition for excellence in mathematical modeling.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2024</div>
-      <div class="timeline-title">Second Prize — National Mathematical Contest for College Students (Non-Math Category A)</div>
-      <div class="timeline-desc">Award for high performance in national mathematics challenge.</div>
+      <div class="timeline-title" data-zh="全国大学生数学竞赛（非数学类 A 组）· 二等奖">Second Prize — National Mathematical Contest for College Students (Non-Math Category A)</div>
+      <div class="timeline-desc" data-zh="全国性大学生数学竞赛奖励。">Award for high performance in national mathematics challenge.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2024</div>
-      <div class="timeline-title">Excellence Award — 11th “Sharing Cup” Innovation Competition on Sci-Tech Resource Sharing</div>
-      <div class="timeline-desc">Recognizing innovative solutions for resource sharing services.</div>
+      <div class="timeline-title" data-zh="第十一届“共享杯”科技资源共享服务创新大赛 · 优秀奖">Excellence Award — 11th “Sharing Cup” Innovation Competition on Sci-Tech Resource Sharing</div>
+      <div class="timeline-desc" data-zh="科技资源共享服务创新方面的竞赛奖励。">Recognizing innovative solutions for resource sharing services.</div>
     </div>
 
   </div>
@@ -179,33 +87,45 @@
   <!-- ======================= -->
   <!--     SCHOLARSHIPS        -->
   <!-- ======================= -->
-  <h2>Scholarships</h2>
+  <h2 data-zh="奖学金">Scholarships</h2>
 
   <div class="timeline">
 
     <div class="timeline-item">
-      <div class="timeline-year">2025</div>
-      <div class="timeline-title">China National Scholarship</div>
-      <div class="timeline-desc">Highest national-level award for top academic performance.</div>
+      <div class="timeline-year">2026</div>
+      <div class="timeline-title" data-zh="国家奖学金">China National Scholarship</div>
+      <div class="timeline-desc" data-zh="国家级学生奖学金。">Highest national-level award for top academic performance.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2026</div>
+      <div class="timeline-title" data-zh="中山大学优秀学生奖学金 · 一等奖">First Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
+      <div class="timeline-desc" data-zh="校级学业表现奖励。">Awarded for academic excellence within the university.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2025</div>
-      <div class="timeline-title">First Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
-      <div class="timeline-desc">Awarded for academic excellence within the university.</div>
+      <div class="timeline-title" data-zh="国家奖学金">China National Scholarship</div>
+      <div class="timeline-desc" data-zh="国家级学生奖学金。">Highest national-level award for top academic performance.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2025</div>
+      <div class="timeline-title" data-zh="中山大学优秀学生奖学金 · 一等奖">First Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
+      <div class="timeline-desc" data-zh="校级学业表现奖励。">Awarded for academic excellence within the university.</div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-year">2024</div>
-      <div class="timeline-title">Second Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
-      <div class="timeline-desc">Recognition of strong academic and research performance.</div>
+      <div class="timeline-title" data-zh="中山大学优秀学生奖学金 · 二等奖">Second Prize — Outstanding Student Scholarship, Sun Yat-sen University</div>
+      <div class="timeline-desc" data-zh="校级学业与科研表现奖励。">Recognition of strong academic and research performance.</div>
     </div>
 
   </div>
 
-</div>
+</main>
 
 
-<footer>© 2026 Huan Chen</footer>
+<footer data-zh="© 2026 陈桓">© 2026 Huan Chen</footer>
 </body>
 </html>

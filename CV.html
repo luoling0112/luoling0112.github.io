@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CV | Huan Chen</title>
+<title data-zh="个人简历 | 陈桓">CV | Huan Chen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
@@ -10,39 +10,43 @@
 
 <body>
 <!-- ========== 导航栏 ========== -->
-<div class="navbar">
+<nav class="navbar" aria-label="Main navigation" data-zh="主导航" data-translate-attribute="aria-label">
   <div class="inner">
+    <a href="index.html" class="brand" data-zh="陈桓">Huan Chen</a>
     <div class="right">
-      <a href="index.html">Home</a>
-      <a href="pub.html">Publications</a>
-      <a href="Awards.html">Awards</a>
-      <a href="activities.html">Activities</a>
-      <a href="partner.html">Partners</a>
-      <a href="CV.html" class="active">CV</a>
-      <span class="toggle-dark" onclick="toggleDark()">🌙</span>
+      <a href="index.html" data-zh="首页">Home</a>
+      <a href="pub.html" data-zh="学术论文">Publications</a>
+      <a href="Awards.html" data-zh="荣誉奖励">Awards</a>
+      <a href="activities.html" data-zh="学术活动">Activities</a>
+      <a href="partner.html" data-zh="合作伙伴">Partners</a>
+      <a href="CV.html" class="active" data-zh="个人简历">CV</a>
+      <div class="nav-controls">
+        <button class="toggle-dark" type="button" onclick="toggleDark()" aria-label="Toggle color theme">Dark</button>
+        <button class="toggle-language" type="button" onclick="toggleLanguage()" aria-label="Switch to Chinese">中文</button>
+      </div>
     </div>
   </div>
-</div>
+</nav>
 
 <!-- ========== 主体内容 ========== -->
-<div class="container">
-  <h1>Curriculum Vitae</h1>
+<main class="container">
+  <h1 class="page-title" data-zh="个人简历">Curriculum Vitae</h1>
 
   <p>
-    <a class="badge" href="cv/Huan_Chen_CV.pdf" target="_blank">View English CV (PDF)</a>
+    <a class="badge" href="cv/Huan_Chen_CV.pdf" target="_blank" data-zh="查看英文简历（PDF）">View English CV (PDF)</a>
   </p>
 
   <p>
-    <a class="badge" href="cv/陈桓_CV.pdf" target="_blank">查看中文简历 (PDF)</a>
+    <a class="badge" href="cv/陈桓_CV.pdf" target="_blank" data-zh="查看中文简历（PDF）">查看中文简历 (PDF)</a>
   </p>
 
-  <p style="margin-top:25px; color:#555;">
+  <p class="cv-note" data-zh="更新于：2026年3月&lt;br&gt;简历版本随近期论文与获奖情况同步更新。">
     Updated: March 2026<br>
     All versions are kept consistent with recent publications and awards.
   </p>
-</div>
+</main>
 
 
-<footer>© 2026 Huan Chen</footer>
+<footer data-zh="© 2026 陈桓">© 2026 Huan Chen</footer>
 </body>
 </html>

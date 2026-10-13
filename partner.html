@@ -2,128 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Partners | Huan Chen</title>
+<title data-zh="合作伙伴 | 陈桓">Partners | Huan Chen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 
-<style>
-.partner-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin: 24px 0;
-  padding: 18px;
-  border-bottom: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  transition: transform .25s, box-shadow .25s;
-}
-.partner-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
-}
-.partner-card .thumb { flex: 0 0 130px; }
-.partner-card .thumb img {
-  width: 130px; height: 130px;
-  object-fit: contain;   /* ✅ 改为contain保证完整显示 */
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  display: block;
-}
-.partner-card .meta { flex: 1; position: relative; }
-.partner-card .meta-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.partner-card .meta-header h3 {
-  margin: 0;
-  font-size: 1.15rem;
-  color: #111;
-}
-.partner-card .meta-header span.school {
-  font-size: 0.9rem;
-  color: #666;
-  text-align: right;
-}
-.partner-card .meta p {
-  margin: 6px 0 0 0;
-  color: #333;
-  line-height: 1.55;
-}
-.partner-card .links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-.partner-card .links a {
-  background: #e9eefb;
-  color: #3056d3;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: .92rem;
-  text-decoration: none;
-}
-.partner-card .links a:hover { background: #d4ddfa; }
-
-/* 夜间模式 */
-.dark-mode .partner-card {
-  background: #1f1f1f;
-  border-bottom: 1px solid #333;
-  box-shadow: 0 2px 8px rgba(255,255,255,0.06);
-}
-.dark-mode .partner-card .meta-header h3 { color: #fff; }
-.dark-mode .partner-card .meta-header span.school { color: #bbb; }
-.dark-mode .partner-card .meta p { color: #ddd; }
-.dark-mode .partner-card .links a { background: #333; color: #ddd; }
-.dark-mode .partner-card .links a:hover { background: #444; }
-
-/* 响应式 */
-@media (max-width: 720px) {
-  .partner-card { flex-direction: column; align-items: flex-start; }
-  .partner-card .thumb { flex: 0 0 auto; }
-  .partner-card .thumb img { width: 140px; height: 140px; }
-  .partner-card .meta-header { flex-direction: column; align-items: flex-start; gap: 4px; }
-  .partner-card .meta-header span.school { text-align: left; }
-}
-</style>
 </head>
 
 <body>
 <!-- 导航栏 -->
-<div class="navbar">
+<nav class="navbar" aria-label="Main navigation" data-zh="主导航" data-translate-attribute="aria-label">
   <div class="inner">
+    <a href="index.html" class="brand" data-zh="陈桓">Huan Chen</a>
     <div class="right">
-      <a href="index.html">Home</a>
-      <a href="pub.html">Publications</a>
-      <a href="Awards.html">Awards</a>
-      <a href="activities.html">Activities</a>
-      <a href="partner.html" class="active">Partners</a>
-      <a href="CV.html">CV</a>
-      <span class="toggle-dark" onclick="toggleDark()">🌙</span>
+      <a href="index.html" data-zh="首页">Home</a>
+      <a href="pub.html" data-zh="学术论文">Publications</a>
+      <a href="Awards.html" data-zh="荣誉奖励">Awards</a>
+      <a href="activities.html" data-zh="学术活动">Activities</a>
+      <a href="partner.html" class="active" data-zh="合作伙伴">Partners</a>
+      <a href="CV.html" data-zh="个人简历">CV</a>
+      <div class="nav-controls">
+        <button class="toggle-dark" type="button" onclick="toggleDark()" aria-label="Toggle color theme">Dark</button>
+        <button class="toggle-language" type="button" onclick="toggleLanguage()" aria-label="Switch to Chinese">中文</button>
+      </div>
     </div>
   </div>
-</div>
+</nav>
 
 <!-- 主体 -->
-<div class="container">
-  <h1>Partners</h1>
+<main class="container">
+  <h1 class="page-title" data-zh="合作伙伴">Partners</h1>
 
   <!-- Partner 1 -->
   <div class="partner-card">
     <div class="thumb"><img src="partners/hanting.png" alt="Ting Han"></div>
     <div class="meta">
       <div class="meta-header">
-        <h3>Ting Han <span>(韩汀)</span></h3>
-        <span class="school">Sun Yat-sen University</span>
+        <h3 data-zh="韩汀">Ting Han <span>(韩汀)</span></h3>
+        <span class="school" data-zh="中山大学">Sun Yat-sen University</span>
       </div>
-      <p>His research interests focus on advancing geospatial artificial intelligence by integrating deep learning theories and methods into 3D point cloud processing for remote sensing applications. He aims to develop interpretable and generalizable AI models that analyze urban morphology, vegetation structure, and built environments from multi-source geospatial data, emphasizing the synergy of spatial cognition and data-driven intelligence for sustainable urban analytics.</p>
+      <p data-zh="研究方向为地理空间人工智能与遥感三维点云处理，关注深度学习在城市形态、植被结构和建成环境分析中的应用，探索具有可解释性与泛化能力的模型，并结合空间认知和多源数据开展可持续城市分析。">His research interests focus on advancing geospatial artificial intelligence by integrating deep learning theories and methods into 3D point cloud processing for remote sensing applications. He aims to develop interpretable and generalizable AI models that analyze urban morphology, vegetation structure, and built environments from multi-source geospatial data, emphasizing the synergy of spatial cognition and data-driven intelligence for sustainable urban analytics.</p>
       <div class="links">
-        <a href="https://ting-devin-han.github.io/Homepage-main/index.html" target="_blank">Homepage</a>
-        <a href="mailto:hant23@mail2.sysu.edu.cn">Email</a>
+        <a href="https://ting-devin-han.github.io/Homepage-main/index.html" target="_blank" data-zh="个人主页">Homepage</a>
+        <a href="mailto:hant23@mail2.sysu.edu.cn" data-zh="邮箱">Email</a>
       </div>
     </div>
   </div>
@@ -133,13 +54,13 @@
     <div class="thumb"><img src="partners/luoyang.png" alt="Yang Luo"></div>
     <div class="meta">
       <div class="meta-header">
-        <h3>Yang Luo <span>(罗阳)</span></h3>
-        <span class="school">Sun Yat-sen University</span>
+        <h3 data-zh="罗阳">Yang Luo <span>(罗阳)</span></h3>
+        <span class="school" data-zh="中山大学">Sun Yat-sen University</span>
       </div>
-      <p>His research interests focus on advancing domain adaptation methodologies by integrating transfer learning and deep learning theories into 3D point cloud processing for remote sensing applications. He aims to develop robust and generalizable models that bridge the domain gap across different sensors, acquisition conditions, and scene types, addressing domain shift challenges in point cloud understanding from multi-source remote sensing data, emphasizing the synergy of domain-invariant feature learning and adaptive model architectures for effective cross-domain knowledge transfer.</p>
+      <p data-zh="研究方向为领域自适应与遥感三维点云处理，结合迁移学习和深度学习，探索不同传感器、采集条件及场景之间的知识迁移。关注域不变特征学习与自适应模型，提升点云理解模型的稳健性和跨域泛化能力。">His research interests focus on advancing domain adaptation methodologies by integrating transfer learning and deep learning theories into 3D point cloud processing for remote sensing applications. He aims to develop robust and generalizable models that bridge the domain gap across different sensors, acquisition conditions, and scene types, addressing domain shift challenges in point cloud understanding from multi-source remote sensing data, emphasizing the synergy of domain-invariant feature learning and adaptive model architectures for effective cross-domain knowledge transfer.</p>
       <div class="links">
-        <a href="https://scholar.google.com.hk/citations?user=FAY1XUMAAAAJ&hl=zh-CN" target="_blank">Homepage</a>
-        <a href="mailto:luoy583@mail2.sysu.edu.cn">Email</a>
+        <a href="https://scholar.google.com.hk/citations?user=FAY1XUMAAAAJ&hl=zh-CN" target="_blank" data-zh="个人主页">Homepage</a>
+        <a href="mailto:luoy583@mail2.sysu.edu.cn" data-zh="邮箱">Email</a>
       </div>
     </div>
   </div>
@@ -149,13 +70,13 @@
     <div class="thumb"><img src="partners/wdd.png" alt="Chaolei Wang"></div>
     <div class="meta">
       <div class="meta-header">
-        <h3>Chaolei Wang <span>(王朝磊)</span></h3>
-        <span class="school">Sun Yat-sen University</span>
+        <h3 data-zh="王朝磊">Chaolei Wang <span>(王朝磊)</span></h3>
+        <span class="school" data-zh="中山大学">Sun Yat-sen University</span>
       </div>
-      <p>His research centers on leveraging 2D vision-language models to advance 3D scene understanding. This exploration has broadened his focus towards the construction of GeoAI foundation models for geospatial applications. He is driven by a passion for exploring how cutting-edge vision and language technologies can be applied to large-scale point clouds and remote sensing data.</p>
+      <p data-zh="研究方向为二维视觉语言模型与三维场景理解，并进一步探索面向地理空间应用的 GeoAI 基础模型，关注视觉和语言技术在大规模点云及遥感数据中的应用。">His research centers on leveraging 2D vision-language models to advance 3D scene understanding. This exploration has broadened his focus towards the construction of GeoAI foundation models for geospatial applications. He is driven by a passion for exploring how cutting-edge vision and language technologies can be applied to large-scale point clouds and remote sensing data.</p>
       <div class="links">
-        <a href="https://wangchaolei7.github.io/" target="_blank">Homepage</a>
-        <a href="mailto:wangchlei5@mail2.sysu.edu.cn">Email</a>
+        <a href="https://wangchaolei7.github.io/" target="_blank" data-zh="个人主页">Homepage</a>
+        <a href="mailto:wangchlei5@mail2.sysu.edu.cn" data-zh="邮箱">Email</a>
       </div>
     </div>
   </div>
@@ -165,17 +86,17 @@
     <div class="thumb"><img src="partners/hxb.png" alt="Xiaobin Huang"></div>
     <div class="meta">
       <div class="meta-header">
-        <h3>Xiaobin Huang <span>(黄晓彬)</span></h3>
-        <span class="school">Sun Yat-sen University</span>
+        <h3 data-zh="黄晓彬">Xiaobin Huang <span>(黄晓彬)</span></h3>
+        <span class="school" data-zh="中山大学">Sun Yat-sen University</span>
       </div>
-      <p>His research focuses on two separate areas: (1) exploring and advancing 3D point cloud editing techniques through deep learning and interactive methods; and (2) developing intuitive tools for creating and manipulating high-quality 3D assets from multi-modal data, including semantic-aware editing, generative modeling, and geometric refinement with neural representations and user-centric design.</p>
+      <p data-zh="研究方向包括三维点云编辑，以及多模态数据驱动的三维资产创建与交互工具。关注语义感知编辑、生成建模和神经表示下的几何优化，探索易于使用的三维内容处理方法。">His research focuses on two separate areas: (1) exploring and advancing 3D point cloud editing techniques through deep learning and interactive methods; and (2) developing intuitive tools for creating and manipulating high-quality 3D assets from multi-modal data, including semantic-aware editing, generative modeling, and geometric refinement with neural representations and user-centric design.</p>
       <div class="links">
-        <a href="mailto:huangxb35@mail2.sysu.edu.cn">Email</a>
+        <a href="mailto:huangxb35@mail2.sysu.edu.cn" data-zh="邮箱">Email</a>
       </div>
     </div>
   </div>
-</div>
+</main>
 
-<footer>© 2026 Huan Chen</footer>
+<footer data-zh="© 2026 陈桓">© 2026 Huan Chen</footer>
 </body>
 </html>
