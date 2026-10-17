@@ -4,4 +4,4 @@ This is the personal homepage of Huan Chen.
 
 Visit: https://luoling0112.github.io
 
-Last updated: January 2026 - Updated to fix deployment issue
+Last updated: October 2026 - Updated to fix deployment issue
